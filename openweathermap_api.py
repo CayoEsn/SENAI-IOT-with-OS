@@ -1,8 +1,12 @@
 import time
 import requests
+import os
 
-api_key = "dc5991b613f4e0957a845c0fe1bd9ba9"
-base_url = "http://api.openweathermap.org/data/2.5/weather?"
+from dotenv import load_dotenv 
+load_dotenv()
+
+api_key = os.getenv('API_KEY')
+base_url = os.getenv('BASE_URL')
 city_name = "Inhumas"
 complete_url = base_url + "appid=" + api_key + "&q=" + city_name
 
@@ -30,6 +34,3 @@ def get_weather_openweathermap():
     else:
         return "City Not Found"
 
-
-if __name__ == '__main__':
-    get_weather_openweathermap()
