@@ -14,7 +14,7 @@ username = 'emqx'
 password = 'public'
 
 
-def connect_mqtt():
+def connect_mqtt() -> mqtt_client:
     def on_connect(client, userdata, flags, rc):
         if rc == 0:
             print("Connected to MQTT Broker!")
