@@ -12,8 +12,8 @@ complete_url = base_url + "appid=" + api_key + "&q=" + city_name
 
 
 def get_weather_openweathermap():
-    time.sleep(2)
-    return {'temperature_kelvin': '295', 'atmospheric_pressure': '1006', 'humidity': '61', 'description': 'clear sky'}
+    time.sleep(5)
+    # return {'temperature_kelvin': '295', 'atmospheric_pressure': '1006', 'humidity': '61', 'description': 'clear sky'}
 
     response = requests.get(complete_url)
     response = response.json()
