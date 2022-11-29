@@ -32,7 +32,6 @@ def publish(client):
     while True:
         response = get_weather_openweathermap()
         msg = response
-        print(333, str(msg))
         result = client.publish(topic, str(msg))
 
         status = result[0]
